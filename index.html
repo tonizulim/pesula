@@ -8,6 +8,7 @@
   <meta name="keywords" content="praonica rublja, Seget Donji, pranje rublja, dostava rublja, peglanje, Pesula" />
   <meta name="author" content="Pesula" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#2563eb" />
   <link rel="canonical" href="https://pesula.hr/" />
 
   <!-- Open Graph -->
@@ -16,13 +17,22 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pesula.hr/" />
   <meta property="og:image" content="https://pesula.hr/images/img-20240620-wa0002-p-500.jpg" />
+  <meta property="og:image:width" content="500" />
+  <meta property="og:image:height" content="500" />
   <meta property="og:locale" content="hr_HR" />
+  <meta property="og:site_name" content="Pesula" />
 
-  <!-- Schema.org LocalBusiness -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pesula – Praonica Rublja Seget Donji" />
+  <meta name="twitter:description" content="Profesionalna usluga pranja rublja s prikupljanjem i dostavom na kućnu adresu." />
+  <meta name="twitter:image" content="https://pesula.hr/images/img-20240620-wa0002-p-500.jpg" />
+
+  <!-- Schema.org LaundryService -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "LaundryService",
     "name": "Pesula – Praonica Rublja",
     "description": "Profesionalna praonica rublja u Segetu Donjem. Pranje, sušenje, peglanje i dostava.",
     "url": "https://pesula.hr",
@@ -42,12 +52,24 @@
     },
     "openingHours": "Mo-Sa 08:00-20:00",
     "priceRange": "€€",
-    "image": "https://pesula.hr/images/img-20240620-wa0002-p-500.jpg"
+    "image": "https://pesula.hr/images/img-20240620-wa0002-p-500.jpg",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Usluge pranja rublja",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Prikupljanje rublja" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Profesionalno pranje" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sušenje rublja" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Peglanje rublja" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dostava kući" } }
+      ]
+    }
   }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="https://pesula.hr/images/img-20240620-wa0002-p-500.jpg" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
@@ -83,7 +105,12 @@
         <li><a href="#kako-radimo">Kako radimo</a></li>
         <li><a href="#o-nama">O nama</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
-        <li><a href="tel:+385997706600" class="btn btn--primary">Nazovite nas</a></li>
+        <li><a href="tel:+385997706600" class="btn btn--primary">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i> Nazovite nas
+        </a></li>
+        <li><a href="https://wa.me/385997706600" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
+        </a></li>
       </ul>
     </div>
   </header>
@@ -101,6 +128,10 @@
           <a href="tel:+385997706600" class="btn btn--primary btn--lg">
             <i class="fa-solid fa-phone" aria-hidden="true"></i>
             Nazovite odmah
+          </a>
+          <a href="https://wa.me/385997706600" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--lg">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            WhatsApp
           </a>
           <a href="#usluge" class="btn btn--ghost btn--lg">Pogledajte usluge</a>
         </div>
@@ -289,6 +320,26 @@
 
   </main>
 
+  <!-- CTA BANNER -->
+  <section class="cta-banner" aria-labelledby="cta-heading">
+    <div class="container cta-banner__inner">
+      <div class="cta-banner__text">
+        <h2 id="cta-heading">Spremni za čisto rublje?</h2>
+        <p>Nazovite nas ili pišite na WhatsApp — dogovorimo termin koji vam odgovara.</p>
+      </div>
+      <div class="cta-banner__actions">
+        <a href="tel:+385997706600" class="btn btn--white btn--lg">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          099 770 6600
+        </a>
+        <a href="https://wa.me/385997706600" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--lg">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     <div class="container footer__inner">
@@ -325,5 +376,10 @@
   </footer>
 
   <script src="main.js"></script>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/385997706600" target="_blank" rel="noopener noreferrer" class="fab-whatsapp" aria-label="Kontaktirajte nas na WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
 </body>
 </html>

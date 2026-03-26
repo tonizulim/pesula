@@ -31,6 +31,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Active nav link on scroll
+const sections = document.querySelectorAll('main section[id]');
+const navLinks = document.querySelectorAll('.nav__links a[href^="#"]');
+
+const sectionObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+        });
+      }
+    });
+  },
+  { rootMargin: '-30% 0px -60% 0px' }
+);
+
+sections.forEach(s => sectionObserver.observe(s));
+
 // Scroll-triggered fade-in animations
 const observer = new IntersectionObserver(
   entries => entries.forEach(entry => {
